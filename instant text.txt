@@ -1,0 +1,11 @@
+Solve the problem in C language using function.
+
+please try more easy way by loop without using function
+
+
+*******
+ ***** 
+  ***
+   *
+
+

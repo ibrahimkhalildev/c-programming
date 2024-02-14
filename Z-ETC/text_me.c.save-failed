@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    char sentance[1000];
+    // scanf("%s", sentance);
+    fgets(sentance);
+
+    printf("My Name is %s", sentance);
+
+    return 0;
+}

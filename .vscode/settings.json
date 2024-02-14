@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.compilerPath": "e:\\My Folder\\Learning\\Phitron Course\\C\\.vscode\\c_cpp_properties.json",
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "stdio.h": "c"
+    }
+}
