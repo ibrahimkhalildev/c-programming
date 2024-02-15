@@ -2,10 +2,17 @@ Solve the problem in C language using function.
 
 please try more easy way by loop without using function
 
+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
 
-*******
- ***** 
-  ***
-   *
+git commit -m "C Programming 2022"
+git branch -M main
+git remote add origin https://github.com/ibrahimkhalildev/c-programming.git
+git push -u origin main
 
+*** Please tell me who you are.
+
+Run
+
+git config user.email "ibrahimkholil01@gmail.com"
+git config user.name "ibrahimkhalildev"
 
