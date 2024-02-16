@@ -1,28 +1,25 @@
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
-void pattern_machine(int n)
-{
-    for (int i = n; i > 0; i--)
-    {
-        for (int j = 0; j < n - i; j++)
-        {
-            printf(" ");
-        }
+void even_number_uppercase_converter(char str[]);
 
-        for (int k = 0; k < 2 * i - 1; k++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
+int main() {
+    char str[100];
+    printf("Input a word: \n");
+    fgets(str, sizeof(str), stdin);
+
+    even_number_uppercase_converter(str);
+
+    printf("%s\n", str);
+
+    return 0;
 }
 
-int main()
-{
-    int row_num;
-    printf("Input Row Number:\n");
-    scanf("%d", &row_num);
-
-    pattern_machine(row_num);
-    return 0;
+void even_number_uppercase_converter(char str[]) {
+    for (int i = 0; i < strlen(str); i++) {
+        if (isdigit(str[i]) && (str[i] - '0') % 2 == 0) {
+            str[i] = toupper(str[i]);
+        }
+    }
 }
