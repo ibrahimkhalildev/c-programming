@@ -1,6 +1,19 @@
 #include <stdio.h>
 
-int calculateSum(int N)
+int calculating_series(int N);
+
+int main()
+{
+    int N;
+    printf("Input an Integer: ");
+    scanf("%d", &N);
+
+    int sum = calculating_series(N);
+    printf("Sum of %dth element: %d\n", N, sum);
+    return 0;
+}
+
+int calculating_series(int N)
 {
     int sum = 0;
     int num = 1;
@@ -12,7 +25,6 @@ int calculateSum(int N)
         sum += sign * num;
         num++;
         count++;
-
         if (count == 3)
         {
             count = 0;
@@ -21,17 +33,4 @@ int calculateSum(int N)
     }
 
     return sum;
-}
-
-int main()
-{
-    int N;
-    printf("Enter the value of N: ");
-    scanf("%d", &N);
-
-    int sum = calculateSum(N);
-
-    printf("Sum of the %dth element: %d\n", N, sum);
-
-    return 0;
 }

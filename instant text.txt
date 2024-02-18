@@ -1,5 +1,7 @@
 Solve the problem in C language using function.
 
+where is my mistake?
+
 please try more easy way by loop without using function
 
 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
