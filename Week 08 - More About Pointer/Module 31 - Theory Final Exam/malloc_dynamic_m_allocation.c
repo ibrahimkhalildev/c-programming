@@ -26,10 +26,8 @@ int main()
     printf("\nElements of Array: \n");
     for (int i = 0; i < N; i++)
     {
-        printf("%d \n", ptr[i]);
+            printf("%d \n", ptr[i]);
     }
-    free(ptr);
-    printf("\n");
     return 0;
-
+    printf("\n");
 }
