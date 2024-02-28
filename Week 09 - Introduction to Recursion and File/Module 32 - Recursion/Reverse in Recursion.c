@@ -4,9 +4,11 @@ void solve(int i, int n)
 {
     if (i > n)
         return;
-    printf("%d\n", i);
     solve(i + 1, n);
+    printf("%d\n", i);
+
 }
+
 int main()
 {
     int n;
