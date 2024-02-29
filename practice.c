@@ -1,35 +1,39 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
+// Function to check if the given year is a FIFA year or not
+char* is_fifa_year(int year)
 {
-    int N;
-    printf("Input Element Number: ");
-    scanf("%d", &N);
-    printf("\n");
-
-    int *ptr;
-    ptr = (int *)malloc(N * sizeof(int));
-
-    if (ptr == NULL)
+    if (year % 400 == 0)
     {
-        printf("Memory allocation Failed!\n");
+        return "Yes";
+    }
+    else if (year % 100 == 0)
+    {
+        return "No";
+    }
+    else if (year % 4 == 0)
+    {
+        return "Yes";
     }
     else
     {
-        printf("Input Array Elements: \n");
-        for (int i = 0; i < N; i++)
-        {
-            scanf("%d", &ptr[i]);
-        }
+        return "No";
     }
-    printf("\nElements of Array: \n");
-    for (int i = 0; i < N; i++)
-    {
-        printf("%d \n", ptr[i]);
-    }
-    free(ptr);
-    printf("\n");
-    return 0;
+}
 
+int main()
+{
+    int year;
+
+    // Taking input from the user
+    printf("Enter the year: ");
+    scanf("%d", &year);
+
+    // Checking if the year is a FIFA year or not
+    char* result = is_fifa_year(year);
+
+    // Printing the result
+    printf("%s\n", result);
+
+    return 0;
 }

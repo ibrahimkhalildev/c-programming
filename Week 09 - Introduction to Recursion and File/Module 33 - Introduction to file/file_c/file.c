@@ -11,6 +11,6 @@ int main()
         scanf("%d", &a);
         summ += a;
     }
-    printf("%d", summ);
+    printf("Sum -> %d", summ);
     return 0;
 }
