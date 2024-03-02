@@ -1,55 +1,37 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-// Function to compare for sorting in ascending order
-int compare_asc(const void *a, const void *b)
-{
-    return (*(int *)a - *(int *)b);
-}
-
-// Function to compare for sorting in descending order
-int compare_desc(const void *a, const void *b)
-{
-    return (*(int *)b - *(int *)a);
-}
-
-int main()
-{
-    int N;
-    scanf("%d", &N); // Read the size of the arrays
-
-    int array1[N], array2[N];
-    int differences[N];
-
-    // Read the first array
-    for (int i = 0; i < N; i++)
-    {
-        scanf("%d", &array1[i]);
+void decode_number(int number) {
+    char decoded[6]; // Maximum 5 characters for the output + '\0'
+    int index = 0;
+    while (number > 0) {
+        int digit = number % 10;
+        char letter;
+        if (digit == 1) {
+            letter = 'A';
+        } else if (digit == 2) {
+            letter = 'B';
+        } else if (digit == 3) {
+            letter = 'C';
+        } else if (digit == 4) {
+            letter = 'D';
+        } else if (digit == 5) {
+            letter = 'E';
+        } else if (digit == 6) {
+            letter = 'F';
+        } else if (digit == 7) {
+            letter = 'G';
+        } else if (digit == 8) {
+            letter = 'H';
+        } else if (digit == 9) {
+            letter = 'I';
+        } else {
+            letter = ' '; // Assign a default value if digit is not in the range [1, 9]
+        }
+        decoded[index] = letter;
+        index++;
+        number /= 10;
     }
-
-    // Read the second array
-    for (int i = 0; i < N; i++)
-    {
-        scanf("%d", &array2[i]);
+    // Print the decoded string in reversed order
+    for (int i = index - 1; i >= 0; i--) {
+        printf("%c", decoded[i]);
     }
-
-    // Step 2: Sort array1 in ascending order
-    qsort(array1, N, sizeof(int), compare_asc);
-
-    // Step 3: Sort array2 in descending order
-    qsort(array2, N, sizeof(int), compare_desc);
-
-    // Step 4: Calculate differences
-    for (int i = 0; i < N; i++)
-    {
-        differences[i] = array1[i] - array2[i];
-    }
-
-    // Step 5: Print differences
-    for (int i = 0; i < N; i++)
-    {
-        printf("%d ", differences[i]);
-    }
-
-    return 0;
+    printf("\n");
 }

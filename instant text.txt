@@ -1,5 +1,5 @@
-Burger 100 5
-Pizza 250 10
+674 -> 665 -> 638 -> 622 -> 559 [main rank]
+682 p solvin rank;
 
 Solve the problem in C language using function.
 

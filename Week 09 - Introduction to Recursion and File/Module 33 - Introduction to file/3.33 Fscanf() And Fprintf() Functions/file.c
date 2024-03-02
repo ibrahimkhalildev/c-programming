@@ -5,8 +5,8 @@ int main()
     FILE *input_File;
     FILE *output_File;
 
-    input_File = fopen("input1.txt", "r");
-    output_File = fopen("output.txt", "w");
+    input_File = fopen("input1.txt", "r");  // Connection to fiel
+    output_File = fopen("output.txt", "w"); // Connection to fiel
 
     if (input_File == NULL)
     {
